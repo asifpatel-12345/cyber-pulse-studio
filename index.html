@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberPulse Studio | Focus & Productivity Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cyber-grid"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>CYBER<span class="neon-text">PULSE</span></h1>
+            <p class="subtitle">FOCUS & PRODUCTIVITY STUDIO</p>
+        </header>
+
+        <div class="main-grid">
+            <!-- Pomodoro Timer Section -->
+            <section class="glass-card timer-section">
+                <div class="mode-selector">
+                    <button class="mode-btn active" id="workMode" onclick="setMode('work')">Work (25m)</button>
+                    <button class="mode-btn" id="breakMode" onclick="setMode('break')">Break (5m)</button>
+                </div>
+                
+                <div class="timer-display">
+                    <span id="minutes">25</span>:<span id="seconds">00</span>
+                </div>
+
+                <div class="timer-controls">
+                    <button id="startBtn" class="btn primary-btn" onclick="toggleTimer()">START</button>
+                    <button id="resetBtn" class="btn secondary-btn" onclick="resetTimer()">RESET</button>
+                </div>
+            </section>
+
+            <!-- Task Checklist Section -->
+            <section class="glass-card task-section">
+                <h2>MISSION OBJECTIVES</h2>
+                <div class="task-input-group">
+                    <input type="text" id="taskInput" placeholder="Enter new task...">
+                    <button class="btn accent-btn" onclick="addTask()">ADD</button>
+                </div>
+                <ul id="taskList">
+                    <!-- Tasks will be injected here -->
+                </ul>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>Designed for High-Performance Coding & Study Sessions</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
